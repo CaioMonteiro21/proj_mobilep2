@@ -5,6 +5,35 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#C7EAE9"
     tools:context=".Perguntas1">
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="437dp"
+        android:layout_height="643dp"
+        android:background="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="292dp"
+        android:layout_height="31dp"
+        android:fontFamily="@font/manrope_semibold"
+        android:text="IDENTIFICAÇÃO DE DOMICÍLIO:"
+        android:textSize="16sp"
+        android:typeface="serif"
+        tools:layout_editor_absoluteX="43dp"
+        tools:layout_editor_absoluteY="96dp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="31dp"
+        android:layout_height="31dp"
+        app:srcCompat="@drawable/number1"
+        tools:layout_editor_absoluteX="3dp"
+        tools:layout_editor_absoluteY="96dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
