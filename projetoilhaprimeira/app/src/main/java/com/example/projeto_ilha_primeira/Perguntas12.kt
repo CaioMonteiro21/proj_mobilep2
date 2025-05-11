@@ -1,20 +1,46 @@
 package com.example.projeto_ilha_primeira
 
+
+
+import android.content.Intent
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
+import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 
 class Perguntas12 : AppCompatActivity() {
+
+    private lateinit var radioGroup: RadioGroup
+    private lateinit var btnProximo: Button
+    private lateinit var btnVoltar: Button
+    private lateinit var textRetornarInicio: TextView
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
         setContentView(R.layout.activity_perguntas12)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
+
+        radioGroup = findViewById(R.id.radioGroupResposta)
+        btnProximo = findViewById(R.id.btnProximo)
+        btnVoltar = findViewById(R.id.btnVoltar)
+        textRetornarInicio = findViewById(R.id.textRetornarInicio)
+
+        btnProximo.setOnClickListener {
+            val selectedId = radioGroup.checkedRadioButtonId
+            if (selectedId != -1) {
+                val resposta = findViewById<RadioButton>(selectedId).text.toString()
+                // Aqui você pode salvar ou enviar a resposta
+                Toast.makeText(this, "Resposta: $resposta", Toast.LENGTH_SHORT).show()
+                // startActivity(Intent(this, ProximaActivity::class.java))
+            } else {
+                Toast.makeText(this, "Selecione uma opção.", Toast.LENGTH_SHORT).show()
+            }
+        }
+
+        btnVoltar.setOnClickListener {
+            finish() // ou startActivity(Intent(this, PerguntaAnterior::class.java))
+        }
+
+        textRetornarInicio.setOnClickListener {
+            startActivity(Intent(this, MainActivity::class.java))
         }
     }
 }

@@ -1,53 +1,136 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#C7EAE9"
-    tools:context=".Perguntas1">
+    android:background="#FFFFFF">
 
-<<<<<<< HEAD
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Header com imagem -->
+
+        <LinearLayout
+            android:layout_width="380dp"
+            android:layout_height="158dp"
+            android:background="@drawable/blue_box"
+            android:gravity="center"
+            android:padding="17dp">
+
+            <ImageView
+                android:id="@+id/logoImageView"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:contentDescription="Logo"
+                android:src="@drawable/imagem1" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1  IDENTIFICAÇÃO DE DOMICÍLIO:"
+            android:textStyle="bold"
+            android:layout_marginTop="24dp"
+            android:textSize="16sp"
+            android:textColor="#000000" />
+
+        <!-- Endereço -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ENDEREÇO:"
+            android:layout_marginTop="16dp"
+            android:textStyle="bold"
+            android:textColor="#000000" />
+
+        <!-- Bloco de rua e número -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:background="@drawable/blue_box"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp"
 
 
+            android:layout_gravity="center">
 
-    <View
-        android:id="@+id/view"
-        android:layout_width="437dp"
-        android:layout_height="643dp"
-        android:background="#FFFFFF"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+            <TextView
+                android:layout_width="35dp"
+                android:layout_height="wrap_content"
+                android:text="RUA:"
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="292dp"
-        android:layout_height="31dp"
-        android:fontFamily="@font/manrope_semibold"
-        android:text="IDENTIFICAÇÃO DE DOMICÍLIO:"
-        android:textSize="16sp"
-        android:typeface="serif"
-        tools:layout_editor_absoluteX="43dp"
-        tools:layout_editor_absoluteY="96dp" />
+                android:textColor="#000000" />
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="31dp"
-        android:layout_height="31dp"
-        app:srcCompat="@drawable/number1"
-        tools:layout_editor_absoluteX="3dp"
-        tools:layout_editor_absoluteY="96dp" />
->>>>>>> bc032dc6aee307900e5805923c7f5cde712b3d0c
+            <EditText
+                android:id="@+id/ruaEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="R. Marina do Sol"
+                android:background="@android:drawable/edit_text"
+                android:layout_marginBottom="12dp" />
 
-    <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="216dp"
-        android:layout_height="339dp"
-        app:srcCompat="@drawable/imagem1"
-        tools:layout_editor_absoluteX="97dp"
-        tools:layout_editor_absoluteY="254dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="NÚMERO:"
+                android:textColor="#000000" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>=======
+            <EditText
+                android:id="@+id/numeroEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Insira o número"
+                android:inputType="number" />
+        </LinearLayout>
 
+        <!-- Espécie de domicílio -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ESPÉCIE DE DOMICÍLIO OCUPADO:"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+        <RadioGroup
+            android:id="@+id/domicilioRadioGroup"
+            android:orientation="vertical"
+            android:background="@drawable/blue_box"
+            android:padding="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/radio1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="DOMICÍLIO PARTICULAR PERMANENTE OCUPADO" />
+
+            <RadioButton
+                android:id="@+id/radio2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="DOMICÍLIO PARTICULAR IMPROVISADO OCUPADO" />
+
+            <RadioButton
+                android:id="@+id/radio3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="DOMICÍLIO COLETIVO COM MORADOR" />
+        </RadioGroup>
+
+        <!-- Botão para próxima pergunta -->
+        <Button
+            android:id="@+id/btnNext"
+            android:layout_width="371dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="#006680"
+            android:text="Próximo"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+</ScrollView>
