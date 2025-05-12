@@ -11,7 +11,6 @@
         android:layout_height="wrap_content">
 
         <!-- Header com imagem -->
-
         <LinearLayout
             android:layout_width="380dp"
             android:layout_height="158dp"
@@ -54,15 +53,12 @@
             android:background="@drawable/blue_box"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="16dp"
-
-
             android:layout_gravity="center">
 
             <TextView
                 android:layout_width="35dp"
                 android:layout_height="wrap_content"
                 android:text="RUA:"
-
                 android:textColor="#000000" />
 
             <EditText
@@ -123,14 +119,36 @@
                 android:text="DOMICÍLIO COLETIVO COM MORADOR" />
         </RadioGroup>
 
-        <!-- Botão para próxima pergunta -->
-        <Button
-            android:id="@+id/btnNext"
-            android:layout_width="371dp"
+        <!-- Botões lado a lado -->
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:orientation="horizontal"
             android:layout_marginTop="16dp"
-            android:backgroundTint="#006680"
-            android:text="Próximo"
-            android:textColor="@android:color/white" />
+            android:gravity="center_horizontal"
+            android:weightSum="2">
+
+            <Button
+                android:id="@+id/btnPrevious"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="8dp"
+                android:backgroundTint="#d6eef0"
+                android:textColor="#006680"
+                android:text="Anterior"
+                 />
+
+            <Button
+                android:id="@+id/btnNext"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="8dp"
+                android:backgroundTint="#006680"
+                android:text="Próximo"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+
     </LinearLayout>
 </ScrollView>

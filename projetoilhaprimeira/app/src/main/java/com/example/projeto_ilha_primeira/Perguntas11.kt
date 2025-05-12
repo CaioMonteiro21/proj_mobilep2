@@ -1,7 +1,5 @@
 package com.example.projeto_ilha_primeira
 
-
-
 import android.content.Intent
 import android.os.Bundle
 import android.widget.*
@@ -28,18 +26,22 @@ class Perguntas11 : AppCompatActivity() {
             if (selectedId != -1) {
                 val resposta = findViewById<RadioButton>(selectedId).text.toString()
                 Toast.makeText(this, "Resposta: $resposta", Toast.LENGTH_SHORT).show()
-                // startActivity(Intent(this, Perguntas12::class.java))
+                val intent = Intent(this, Perguntas12::class.java)
+                startActivity(intent)
             } else {
                 Toast.makeText(this, "Selecione uma opção.", Toast.LENGTH_SHORT).show()
             }
         }
 
         btnVoltar.setOnClickListener {
+            val intent = Intent(this, Perguntas10_1::class.java)
+            startActivity(intent)
             finish()
         }
 
         textRetornarInicio.setOnClickListener {
             startActivity(Intent(this, MainActivity::class.java))
+            finish()
         }
     }
 }

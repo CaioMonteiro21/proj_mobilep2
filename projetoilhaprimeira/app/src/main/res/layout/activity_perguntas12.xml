@@ -9,12 +9,15 @@
     android:padding="16dp">
 
     <!-- Topo com logo -->
+
+    <!-- Número da pergunta -->
+
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="367dp"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:gravity="center"
         android:background="@drawable/blue_box"
+        android:gravity="center"
+        android:orientation="vertical"
         android:padding="16dp">
 
         <ImageView
@@ -26,7 +29,6 @@
             android:src="@drawable/imagem1" />
     </LinearLayout>
 
-    <!-- Número da pergunta -->
     <TextView
         android:id="@+id/textNumeroPergunta"
         android:layout_width="wrap_content"

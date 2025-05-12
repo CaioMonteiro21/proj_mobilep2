@@ -1,7 +1,6 @@
 package com.example.projeto_ilha_primeira
 
-
-
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.*
@@ -27,12 +26,20 @@ class Perguntas10 : AppCompatActivity() {
         }
 
         btnProximo.setOnClickListener {
-            // Aqui você pode validar os campos e seguir para a próxima tela
-            Toast.makeText(this, "Continuar", Toast.LENGTH_SHORT).show()
+            if (radioGroupTrabalha.checkedRadioButtonId == -1) {
+                Toast.makeText(this, "Selecione uma opção", Toast.LENGTH_SHORT).show()
+            } else {
+                // Ir para a próxima página (Perguntas10_1)
+                val intent = Intent(this, Perguntas10_1::class.java)
+                startActivity(intent)
+            }
         }
 
         btnVoltar.setOnClickListener {
-            finish()
+            // Voltar para a tela anterior (Perguntas9)
+            val intent = Intent(this, Perguntas9::class.java)
+            startActivity(intent)
+            finish() // Finaliza esta tela
         }
     }
 }
