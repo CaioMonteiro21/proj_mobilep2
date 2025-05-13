@@ -6,7 +6,6 @@ import android.text.TextUtils
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
 class LoginActivity : AppCompatActivity() {
@@ -33,7 +32,7 @@ class LoginActivity : AppCompatActivity() {
                 errorMessage.visibility = TextView.GONE
                 val intent = Intent(this, Telainicial::class.java)
                 startActivity(intent)
-                finish()
+                finish() // Encerra a tela de login para que o usuário não volte ao apertar "voltar"
             }
         }
     }

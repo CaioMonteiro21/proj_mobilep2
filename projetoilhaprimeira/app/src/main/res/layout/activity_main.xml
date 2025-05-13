@@ -18,9 +18,9 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <!-- Botão para navegar para a Tela 1 -->
+    <!-- Botão para navegar para a Tela de login -->
     <Button
-        android:id="@+id/goToPerguntas1Button"
+        android:id="@+id/goToLoginButton"
         android:layout_width="380dp"
         android:layout_height="49dp"
         android:backgroundTint="#006680"

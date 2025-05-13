@@ -14,14 +14,13 @@ class MainActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
 
-        // Certifique-se de que o ID esteja correto
-        val goToPerguntas1Button: Button = findViewById(R.id.goToPerguntas1Button)
+        // Certifique-se de que o ID do botão em activity_main.xml é "goToLoginButton"
+        val goToLoginButton: Button = findViewById(R.id.goToLoginButton)
 
-        // Configurar o clique do botão para navegar para Perguntas1
-        goToPerguntas1Button.setOnClickListener {
-            // Criar um Intent para navegar para Perguntas1
-            val intent = Intent(this, Perguntas1::class.java)
-            startActivity(intent)  // Inicia a Perguntas1
+        // Configurar o clique do botão para abrir a LoginActivity
+        goToLoginButton.setOnClickListener {
+            val intent = Intent(this, LoginActivity::class.java)
+            startActivity(intent)
         }
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->

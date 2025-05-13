@@ -22,7 +22,7 @@
     <LinearLayout
         android:id="@+id/loginForm"
         android:layout_width="match_parent"
-        android:layout_height="405dp"
+        android:layout_height="354dp"
         android:layout_marginTop="20dp"
         android:background="@drawable/white_box"
         android:orientation="vertical"
@@ -64,6 +64,7 @@
             android:inputType="textPassword" />
 
         <!-- Mensagem de erro -->
+
         <Button
             android:id="@+id/loginButton"
             android:layout_width="333dp"
